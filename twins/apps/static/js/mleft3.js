@@ -1,0 +1,1 @@
+var mCharts = echarts.init(document.querySelector('#echart9'))

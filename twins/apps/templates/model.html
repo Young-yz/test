@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>系统模型</title>
+		<link rel="stylesheet" href="../static/css/model.css">
+		<script type="text/javascript" src="../static/js/jquery.js"></script>
+		<script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../static/js/echarts.min.js"></script>
+	</head>
+	<body>
+		<div id="mtitle">
+			<h1>系统模型 Data Screen</h1>
+			<div class="mt1">
+				<h2><a href="index.html" class="lianjie">返回首页</a></h2>
+			</div>
+			<div class="time" id="showTime">2018/6/12 17:00:12</div>
+		</div>
+		<div id="ml1">
+			<li style="width: 80%">
+				<div class="mtit">系统能耗分布</div>
+			</li>
+			<div id="echart7"></div>
+		</div>
+		<div id="ml2">
+			<li style="width: 80%">
+				<div class="mtit">
+					<h4>注水站外输水量变化趋势</h4>
+					<a href="javascript:;" class="active" data-type="year">年</a>
+					<a href="javascript:;" data-type="quarter">季</a>
+					<a href="javascript:;" data-type="month">月</a>
+					<a href="javascript:;" data-type="week">周</a>
+				</div>
+			</li>
+			<div class="echart8"></div>
+		</div>
+		<div id="ml3">
+			<li style="width: 80%">
+				<div class="mtit">注水泵运行数据评价</div>
+			</li>
+			<div class="echart9">
+				<img src="../static/images/liuliang.gif" style="width: 400px;height: 230px;">
+			</div>
+		</div>
+		<div id="mc1">
+			<h3>✦&nbsp;管网模拟</h3>
+			<div id="map"></div>
+		</div>
+		<div id="mc2">
+			<li style="width: 80%">
+				<div class="mtit">
+						<h4>注水达标情况分析</h4>
+						<a href="javascript:;" class="active" data-type="year">年</a>
+						<a href="javascript:;" data-type="quarter">季</a>
+						<a href="javascript:;" data-type="month">月</a>
+						<a href="javascript:;" data-type="week">周</a>
+					</div>
+			</li>
+			<div class="echart10"></div>
+		</div>
+		<div id="mr1">
+			<li style="width: 80%">
+				<div class="mtit">注水井压力分布评价</div>
+			</li>
+			<div id="echart11"></div>			
+		</div>
+		<div id="mr2">
+			<li style="width: 80%">
+				<div class="mtit">管网联通性评价</div>
+			</li>
+			<div id="echart12"></div>
+		</div>
+		<div id="mr3">
+			<li style="width: 80%">
+				<div class="mtit">管网漏失分析评价</div>
+			</li>
+			<div id="echart13"></div>
+		</div>
+		<script>
+		var t = null;
+		    t = setTimeout(time,1000);//開始运行
+		    function time()
+		    {
+		       clearTimeout(t);//清除定时器
+		       dt = new Date();
+				var y=dt.getFullYear();
+				var mt=dt.getMonth()+1;
+				var day=dt.getDate();
+		       var h=dt.getHours();//获取时
+		       var m=dt.getMinutes();//获取分
+		       var s=dt.getSeconds();//获取秒
+		       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+		       t = setTimeout(time,1000); //设定定时器，循环运行     
+		    } 
+		
+		</script>
+		<script src="../static/js/gw.js"></script>
+		<script src="../static/js/mleft1.js"></script>
+		<script src="../static/js/mleft2.js"></script>
+		<script src="../static/js/mcenter2.js"></script>
+		<script src="../static/js/mright1.js"></script>
+		<script src="../static/js/mright2.js"></script>
+		<script src="../static/js/mright3.js"></script>
+	</body>
+</html>

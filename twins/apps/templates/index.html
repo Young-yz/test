@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数字孪生油田注水系统</title>
+		<link rel="stylesheet" href="../static/css/index.css">
+		<script type="text/javascript" src="../static/js/jquery.js"></script>
+		<script type="text/javascript" src="../static/js/echarts.min.js"></script>
+	</head>
+	<body>
+		<div id="title">
+				<h1>数字孪生油田注水系统</h1>
+			<div class="t1">
+				<h2><a href="model.html" class="lianjie">系统模型</a></h2>
+			</div>
+			<div class="time" id="showTime">2018/6/12 17:00:12</div>
+		</div>
+		<div id="l1">
+			<li style="width: 50%">
+				<div class="tit">管压(mpa)</div>
+			</li>
+			<div id="echart1"></div>
+		</div>
+		<div id="l2">
+			<li style="width: 50%">
+				<div class="tit">泵压(mpa)</div>
+			</li>
+			<div id="echart2"></div>
+		</div>
+		<div id="c1">
+			<h3>✦&nbsp;孪生注水站</h3>
+			<iframe src='https://www.thingjs.com/pp/29b442c916cf405edf8335e7'  frameborder="no"  width="95%" height="88%"></iframe>
+		</div>
+		<div id="c2">
+			<li style="width: 50%">
+				<div class="tit">注水量</div>
+			</li>
+			<div id="echart3"></div>
+		</div>
+		<div id="r1">
+			<li style="width: 50%">
+				<div class="tit">用电量(kwh)</div>
+			</li>
+			<div id="echart4"></div>
+		</div>
+		<div id="r2">
+			<li style="width: 50%">
+				<div class="tit">单耗(kwh/m³)</div>
+			</li>
+			<div id="echart5"></div>
+		</div>
+		<div id="r3">
+			<li style="width: 50%">
+				<div class="tit">泵效(%)</div>
+			</li>
+			<div id="echart6"></div>
+		</div>
+		<script>
+		var t = null;
+		    t = setTimeout(time,1000);//開始运行
+		    function time()
+		    {
+		       clearTimeout(t);//清除定时器
+		       dt = new Date();
+				var y=dt.getFullYear();
+				var mt=dt.getMonth()+1;
+				var day=dt.getDate();
+		       var h=dt.getHours();//获取时
+		       var m=dt.getMinutes();//获取分
+		       var s=dt.getSeconds();//获取秒
+		       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+		       t = setTimeout(time,1000); //设定定时器，循环运行     
+		    } 
+		
+		</script>
+		<script src="../static/js/left1.js"></script>
+		<script src="../static/js/left2.js"></script>
+		<script src="../static/js/center2.js"></script>
+		<script src="../static/js/right1.js"></script>
+		<script src="../static/js/right2.js"></script>
+		<script src="../static/js/right3.js"></script>
+	</body>
+</html>
